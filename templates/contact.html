@@ -1,17 +1,15 @@
-{% extends 'base.html' %}
+<form method="POST">
 
-{% block content %}
+    {% csrf_token %}
 
-<h1>Contact Us</h1>
+    <input type="text" name="name" placeholder="Enter Your Name" required>
 
-<form>
-    <input type="text" placeholder="Your Name">
+    <input type="email" name="email" placeholder="Enter Your Email" required>
 
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Subject">
-    <input type="number" placeholder="enter your phone number ">
+    <input type="text" name="subject" placeholder="Enter Subject" required>
+
+    <input type="text" name="phone" placeholder="Enter Phone Number" required>
 
     <button type="submit">Submit</button>
-</form>
 
-{% endblock %}
+</form>
